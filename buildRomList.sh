@@ -2,7 +2,7 @@ mkdir -v /tmp/list
 cd ~/RetroPie/roms/
 for D in *; do
     if [ -d "${D}" ]; then
-        ls "${D}" > /tmp/list/"${D}".txt
+        ls "${D}" | sort > /tmp/list/"${D}".txt
     fi
 done
 find /tmp/list/ -empty -delete
